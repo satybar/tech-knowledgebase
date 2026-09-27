@@ -1,0 +1,66 @@
+site_name: Technical Knowledgebase
+site_description: Personal technical notes, study guides, and reference material.
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+nav:
+  - Home: index.md
+  - Cloud Platform AWS:
+      - Overview: cloud-aws/index.md
+      - AWS SA: 
+          - Overview: cloud-aws/aws-sa/index.md
+          - Certification Prep: cloud-aws/aws-sa/cert-prep/index.md
+      - AWS DEA:
+          - Overview: cloud-aws/aws-dea/index.md
+          - Certification Prep: cloud-aws/aws-dea/cert-prep/index.md
+      - Terraform: cloud-aws/terraform/index.md
+  - Databases:
+      - Overview: databases/index.md
+      - SQL Server: databases/sql-server/index.md
+      - PostgreSQL: databases/postgresql/index.md
+      - Snowflake:
+          - Overview: databases/snowflake/index.md
+          - Certification Prep: databases/snowflake/cert-prep/index.md
+  - Development Languages:
+      - Overview: development/index.md
+      - PowerShell: development/powershell/index.md
+      - Python: development/python/index.md
+      - Shell Scripting: development/shell-scripting/index.md
+  - IDEs & Tools:
+      - Overview: tooling-ides/index.md
+      - Azure Data Studio: tooling-ides/azure-data-studio/index.md
+      - DBeaver: tooling-ides/dbeaver/index.md
+      - pgAdmin: tooling-ides/pgadmin/index.md
+      - SSMS: tooling-ides/ssms/index.md
+      - Visual Studio SSIS: tooling-ides/visual-studio-ssis/index.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
